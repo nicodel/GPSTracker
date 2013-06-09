@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "name": "GPS tracker",
+  "description": "Your new awesome Open Web App",
+  "launch_path": "/debug.html",
+  "icons": {
+    "16": "/assets/mortar-16.png",
+    "48": "/assets/mortar-48.png",
+    "128": "/assets/mortar-128.png"
+  },
+  "developer": {
+    "name": "nicodel",
+    "url": "http://www.github.com/nicodel"
+  },
+  "permissions": {
+    "geolocation": {
+      "description": "Required to locate the user's device"
+      }
+  },
+  "installs_allowed_from": ["*"],
+  "appcache_path": "/cache.manifest",
+  "default_locale": "en"
+}
