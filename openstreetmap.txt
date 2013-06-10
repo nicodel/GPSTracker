@@ -1,0 +1,22 @@
+http://tile.openstreetmap.org/cgi-bin/export?bbox=2.34,48.85,2.36,48.87&scale=0.057024&format=jpeg
+
+
+
+
+mlat0=
+mlon0=
+icon=31326.png
+[15:25:45,134] "loc: " "http://ojw.dev.openstreetmap.org/StaticMap/?lat=48.87213089999999&lon=2.3412598&mlat0=48.87213089999999&mlon02.3412598&mico0=31326.png&z=15&mode=Export&show=1"
+
+
+[15:30:01,556] "loc: " "http://ojw.dev.openstreetmap.org/StaticMap/?lat=48.87213089999999&lon=2.3412598&mlat0=48.87213089999999&mlon02.3412598&z=16&mode=Export&show=1"
+
+[15:37:26,966] "loc: " "http://ojw.dev.openstreetmap.org/StaticMap/?lat=48.87213089999999&lon=2.3412598&mlat0=48.87213089999999&mlon02.3412598&z=17&mode=Export&show=1"
+
+http://ojw.dev.openstreetmap.org/StaticMap/?lat=48.856094338498&lon=2.3457956314087&z=17&mode=Export&mlat0=48.856235519591&mlon0=2.3458385467529&d0p0lat=48.856171988148&d0p0lon=2.3431885242462&d0p1lat=48.856094338498&d0p1lon=2.3443365097046&d0p2lat=48.855939038836&d0p2lon=2.3453879356384&d0p3lat=48.856157870039&d0p3lon=2.3480594158173&dp_num=4&show=1
+
+[17:51:42,520] "loc: " "http://ojw.dev.openstreetmap.org/StaticMap/?lat=40.714353&lon=-74.005973&mlat0=40.714353&mlon0=-74.005973&d0p0lon=-74.005973&d0p0lat=40.714353&z=15&mode=Export&show=1"
+
+lat 40.714353
+
+Lon -74.005973

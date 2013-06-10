@@ -9,7 +9,7 @@ enyo.kind({
     "point" : 0
   },
   components: [
-    {kind: "onyx.Toolbar", content: "GPS Swiss Knife"},
+    {kind: "onyx.Toolbar", content: "GPS Tracker"},
     {name: "topPanels", kind: "Panels", fit: true, components:[
       {kind: "enyo.Scroller", fit: true, components: [
       {name: "main", classes: "nice-padding", allowHtml: true},
@@ -66,17 +66,19 @@ enyo.kind({
   ],
   create: function() {
     this.inherited(arguments);
-    this.opentrack.track = {};
+    this.opentrack.track = [];
     this.$.topPanels.setIndex(0);
     this.$.realspeed.hide();
     this.$.realduration.hide();
+    this.$.tracksbutton.setDisabled(true);
+    this.$.homebutton.setDisabled(true);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         enyo.bind(this, "successCallback"),
         enyo.bind(this, "errorCallback"),
         {maximumAge: 180000, timeout: 60000, enableHighAccuracy: true}
       );
-      this.$.db1.make("track");
+      // this.$.db1.make("track");
     } else {
       alert("Votre navigateur ne prend pas en compte la geolocalisation HTML5");
     }
@@ -99,6 +101,7 @@ enyo.kind({
     navigator.geolocation.clearWatch(this.geo);
     this.$.startbutton.setDisabled(false);
     this.$.stopbutton.setDisabled(true);
+    this.$.tracksbutton.setDisabled(false);
     this.point = 0;
     // alert("Stopped: ", this.$.db1);
   },
@@ -122,12 +125,12 @@ enyo.kind({
       this.$.closeTrack();
     }
     console.log("Point: " + inPosition);
-    this.$.db1.insert(inPosition);
-    if (!this.opentrack.length) {
-      var i = 0;
-    } else{
-      var i = this.opentrack.length + 1;
-    }
+    // this.$.db1.insert(inPosition);
+    // if (!this.opentrack.length) {
+    //   var i = 0;
+    // } else{
+    //   var i = this.opentrack.length + 1;
+    // }
     this.opentrack.track[this.point] = inPosition;
     console.log("this.point: ", this.point);
     this.point = this.point + 1;
@@ -158,8 +161,11 @@ enyo.kind({
     this.$.topPanels.setIndex(0);
     this.$.tracksbutton.setDisabled(false);
     this.$.homebutton.setDisabled(true);
+    this.$.tracksPanel.destroyComponents();
+    this.opentrack = [];
+    this.opentrack.track = [];
   },
   closeTrack: function(){
     this.tracename = null;
   }
-});
+  });
